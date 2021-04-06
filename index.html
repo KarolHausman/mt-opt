@@ -142,7 +142,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <p style="text-align:center;">
-        	    <image src="img/arm-farm.gif">
+        	    <image src="img/arm-farm.gif" class="img-responsive">
                 </p>
                 <h3>
                     Abstract
@@ -179,7 +179,7 @@ General-purpose robotic systems must master a large repertoire of diverse skills
                 To collect diverse, multi-task data at scale, we create an intuitive success-detector-based approach that allows us to quickly define new tasks and their rewards. We train a multi-task success detector using data from all the tasks and continuously update it to accommodate for distribution shifts caused by various real-world factors such as varying lighting conditions and changing background surroundings. In addition, we provide a data collection strategy to simultaneously collect data for multiple distinct tasks across multiple robots. In this strategy, we use solutions to easier tasks to effectively bootstrap learning of more complex tasks. Over time, this allows us to start training a policy for the harder tasks, and consequently, to collect better data for those tasks.
                 </p>
                 <p style="text-align:center;">
-                    <image src="img/mt-opt.gif" height="600px">
+                    <image src="img/mt-opt.gif"  class="img-responsive" height="600px">
                 </p>
                 <p class="text-justify">
             	The robots generate episodes which then get labelled as success or failure for the current task. These episodes are then copied and shared across other tasks to increase the learning efficiency. The balanced batch of episodes is then sent to our multi-task RL training pipeline to train the MT-Opt policy.
@@ -197,21 +197,21 @@ General-purpose robotic systems must master a large repertoire of diverse skills
                 </p>                
                 <br>
 	        <p style="text-align:center;">
-                    <image src="img/results.gif" height="400px">
+                    <image src="img/results.gif" class="img-responsive" height="400px">
                 </p>
                 <br>
                 <p class="text-justify">
                     When compared to single-task baselines, our MT-Opt system performs similarly on the tasks that have the most data (e.g. generic lifting task at 89% success), while significantly improving performance of tasks underrepresented in the dataset - 50% average success rate on rare tasks compared to 1% achieved with a single-task QT-Opt baseline and 18% success achieved with a naive multi-task QT-Opt baseline.
                 </p>
 	        <p style="text-align:center;">
-                    <image src="img/results.png" height="400px">
+                    <image src="img/results.png" class="img-responsive" height="400px">
                 </p>
                 <br>
                 <p class="text-justify">
                     Using this large pre-trained model not only can we generalize to new but similar tasks in zero-shot, but also we can quickly (in ~2 days of data collection on 7 robots) fine-tune our system to new, previously unseen tasks, such as a towel-covering task shown below (resulting in 92% success rate of towel-picking and 79% success rate of object-covering), which wasn’t present in our original dataset.
                 </p>
 	        <p style="text-align:center;">
-                    <image src="img/cover.gif" height="400px">
+                    <image src="img/cover.gif" class="img-responsive" height="400px">
                 </p>     
             </div>
         </div>
